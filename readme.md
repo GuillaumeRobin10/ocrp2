@@ -10,7 +10,7 @@ afin de lancer le programme vous devez suivre les étapes indiquées pour votre 
 
 
 ### installer python
-telecharger [python](https://www.python.org/downloads/ "python") et installez-le en suivant les instructions.
+télécharger [python](https://www.python.org/downloads/ "python") et installez-le en suivant les instructions.
 
 
 #### Windows
@@ -36,8 +36,8 @@ telecharger [python](https://www.python.org/downloads/ "python") et installez-le
 1. un dossier résultat vient d'être créé, ouvrez-le.
 2. choisir la catégorie qui vous intéresse. 
 
-	-le dossier images contient toutes les images des livres de la catégorie.
-	-le fichier "catégorie.csv" contient les informations des livres
+	- le dossier images contient toutes les images des livres de la catégorie.
+	- le fichier "catégorie.csv" contient les informations des livres
 	
 3. ouvir le fichier "catégorie.csv"
 	1. sélectionner uniquement les cases suivantes:

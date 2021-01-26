@@ -9,7 +9,7 @@ afin de lancer le programme vous devez suivre les étapes indiquées pour votre 
 
 
 
-###installer python
+### installer python
 telecharger [python](https://www.python.org/downloads/ "python") et installez-le en suivant les instructions.
 
 

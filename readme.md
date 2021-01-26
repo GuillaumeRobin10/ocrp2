@@ -41,7 +41,7 @@ télécharger [python](https://www.python.org/downloads/ "python") et installez-
 	
 3. ouvir le fichier "catégorie.csv"
 	1. sélectionner uniquement les cases suivantes:
-		-Séparé par
-		-Autre, puis remplir le champs par | (alt Gr + 6)
-		-vérifier que tous les autres champs sous décocher
-		-vérifier que le champs Séparateur de chaîne de caractère soit vide.
+		- Séparé par
+		- Autre, puis remplir le champs par | (alt Gr + 6)
+		- vérifier que tous les autres champs sous décocher
+		- vérifier que le champs Séparateur de chaîne de caractère soit vide.

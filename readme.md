@@ -9,8 +9,8 @@ afin de lancer le programme vous devez suivre les étapes indiquées pour votre 
 
 
 
-### installer python
-télécharger [python](https://www.python.org/downloads/ "python") et installez-le en suivant les instructions.
+###installer python
+telecharger [python](https://www.python.org/downloads/ "python") et installez-le en suivant les instructions.
 
 
 #### Windows
@@ -36,12 +36,12 @@ télécharger [python](https://www.python.org/downloads/ "python") et installez-
 1. un dossier résultat vient d'être créé, ouvrez-le.
 2. choisir la catégorie qui vous intéresse. 
 
-	- le dossier images contient toutes les images des livres de la catégorie.
-	- le fichier "catégorie.csv" contient les informations des livres
+	-le dossier images contient toutes les images des livres de la catégorie.
+	-le fichier "catégorie.csv" contient les informations des livres
 	
 3. ouvir le fichier "catégorie.csv"
 	1. sélectionner uniquement les cases suivantes:
-		- Séparé par
-		- Autre, puis remplir le champs par | (alt Gr + 6)
-		- vérifier que tous les autres champs sous décocher
-		- vérifier que le champs Séparateur de chaîne de caractère soit vide.
+		-Séparé par
+		-Autre, puis remplir le champs par | (alt Gr + 6)
+		-vérifier que tous les autres champs sous décocher
+		-vérifier que le champs Séparateur de chaîne de caractère soit vide.

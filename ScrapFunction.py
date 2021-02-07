@@ -4,11 +4,19 @@ import urllib.request
 import os
 
 # make a directory
-def make_a_dir(name):
+def make_a_dir(name,name2="",name3=""):
     try:
-        os.mkdir(name)
+        os.mkdir(name+name2+name3)
     except FileExistsError:
         pass
+
+#scrap categories from a html page and return an array
+def make_categories_array(page):
+    page_html= make_a_request(page)
+    num_categories = page_html.find('div', {"class": "side_categories"}).find("ul", {"class": ""}).text
+    categories = num_categories.replace("\n", ",").replace(" ", "-").replace("--", "").replace(",,", "").lower().split(",")
+    return categories
+
 
 #make a request
 def make_a_request(page):
@@ -42,8 +50,7 @@ def case_of_star(star_number_string):
 
 # return the number of page
 def page_number(page):
-    page_request = requests.get(page)
-    page_html = BeautifulSoup(page_request.text, 'lxml')
+    page_html= make_a_request(page)
     try:
         page_number_sting = page_html.find('li', {"class": "current"}).text.strip().replace(" ", "")
         number_of_pages = ""
@@ -121,7 +128,6 @@ def scrap_a_book_page(book_page, category):
     urllib.request.urlretrieve("https://books.toscrape.com/" + url_image,
                                "results/" + category + "/image/" + title + ".jpg")
 
-
 # return an array of book's url
 def url_array(category_url_page):
     links = []
@@ -145,9 +151,7 @@ def url_array(category_url_page):
             link = a["href"]
             link = link.replace("../", "")
             links.append("http://books.toscrape.com/catalogue/" + link)
-
     return links
-
 
 def generate_csv(url, category):
     urls_array = url_array(url)

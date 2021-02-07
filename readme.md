@@ -25,10 +25,10 @@ telecharger [python](https://www.python.org/downloads/ "python") et installez-le
 #### linux/mac
 
 1. ouvrir le terminal (vous pouvez trouver l'outil directement en tapant “terminal” dans la barre de recherche des applications.(finder sous mac))
-2. entrez la commande : ``pip install virtualenv``
+2. entrez la commande : ``pip3 install virtualenv``
 2. entrez la commande : ``virtualenv -p python3 env``
 3. entrez la commande :``source env/bin/activate``
-4. entrez la commande : ``pip install -r requirements.txt``
+4. entrez la commande : ``pip3 install -r requirements.txt``
 5. entrez la commande : ``python3 main.py``
 
 

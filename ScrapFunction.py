@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import urllib.request
 import os
 
+
 # make a directory
 def make_a_dir(name,name2="",name3=""):
     try:
@@ -20,7 +21,7 @@ def make_categories_array(page):
 
 #make a request
 def make_a_request(page):
-    return BeautifulSoup(requests.get(page).text, 'lxml')
+    return BeautifulSoup(requests.get(page).content.decode('UTF-8'), 'lxml')
 
 # transform a character array into a string
 def transform_array_into_a_string(start, end, array):
@@ -67,13 +68,15 @@ def page_number(page):
 
 # get book's trait
 def scrap_a_book_page(book_page, category):
+	
     book_html = make_a_request(book_page)
     try:
-        description = book_html.find('article', {"class": "product_page"}).find("p", {"class": ""}).text.replace("â", "'").replace("¢", ".").replace("Â", "")
+        description = book_html.find('article', {"class": "product_page"}).find("p", {"class": ""}).text
+        
     except AttributeError:
         description = "scrapping error"
     try:
-        title = book_html.find('div', {"class": "col-sm-6 product_main"}).find("h1", {"class": ""}).text.replace("â", "'")
+        title = book_html.find('div', {"class": "col-sm-6 product_main"}).find("h1", {"class": ""}).text
     except AttributeError:
         title = "scrapping error"
         pass
@@ -135,8 +138,7 @@ def url_array(category_url_page):
     if not num_of_pages == 1:
         for index in range(num_of_pages):
             page_url = category_url_page.replace("index.html", "") + "page-" + str(index) + ".html"
-            soup = requests.get(page_url)
-            articles = BeautifulSoup(soup.text, 'lxml').findAll("article")
+            articles=make_a_request(page_url).findAll("article")
             for index2 in articles:
                 a = index2.find('a')
                 link = a["href"]
@@ -145,7 +147,7 @@ def url_array(category_url_page):
     else:
         page_url = category_url_page
         soup = requests.get(page_url)
-        articles = BeautifulSoup(soup.text, 'lxml').findAll("article")
+        articles=make_a_request(page_url).findAll("article")
         for index2 in articles:
             a = index2.find('a')
             link = a["href"]

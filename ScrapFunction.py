@@ -69,11 +69,11 @@ def page_number(page):
 def scrap_a_book_page(book_page, category):
     book_html = make_a_request(book_page)
     try:
-        description = book_html.find('article', {"class": "product_page"}).find("p", {"class": ""}).text
+        description = book_html.find('article', {"class": "product_page"}).find("p", {"class": ""}).text.replace("â", "'")
     except AttributeError:
         description = "scrapping error"
     try:
-        title = book_html.find('div', {"class": "col-sm-6 product_main"}).find("h1", {"class": ""}).text
+        title = book_html.find('div', {"class": "col-sm-6 product_main"}).find("h1", {"class": ""}).text.replace("â", "'")
     except AttributeError:
         title = "scrapping error"
         pass
